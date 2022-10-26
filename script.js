@@ -13,11 +13,24 @@ function generateRandomColor() {
 
 function setRandomColor() {
   cols.forEach((col) => {
-    const color = generateRandomColor();
+    const color = chroma.random().hex();
     const text = col.querySelector("p");
-    text.innerHTML = color;
+    const lock = col.querySelector("button").querySelector("i");
+    text.innerHTML = color.toUpperCase();
     col.style.background = color;
+    setTextColor(text, color, lock);
   });
+}
+
+function setTextColor(text, color, lock) {
+  const luminance = chroma(color).luminance();
+  if (luminance > 0.6) {
+    text.style.color = "black";
+    lock.style.color = "black";
+  } else {
+    text.style.color = "white";
+    lock.style.color = "white";
+  }
 }
 
 console.log(generateRandomColor());

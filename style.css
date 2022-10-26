@@ -14,7 +14,7 @@ body {
 .col {
   border: 1px solid black;
   flex: 1;
-  background: rgb(138, 255, 162);
+  background: rgb(76, 76, 76);
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -26,6 +26,13 @@ body {
   border: none;
   background: none;
   cursor: pointer;
+  background-color: rgba(245, 245, 245, 0.1);
+  padding: 7px 10px;
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
 }
 
 .fa-lock {
@@ -35,11 +42,19 @@ body {
 .text {
   color: white;
   cursor: pointer;
-  background-color: rgba(245, 245, 245, 0.3);
+  background-color: rgba(245, 245, 245, 0.1);
   padding: 4px 15px;
   border-radius: 15px;
   -webkit-border-radius: 15px;
   -moz-border-radius: 15px;
   -ms-border-radius: 15px;
   -o-border-radius: 15px;
+}
+
+.text:hover {
+  background-color: rgba(245, 245, 245, 0.2);
+}
+
+.lock:hover {
+  background-color: rgba(245, 245, 245, 0.2);
 }
