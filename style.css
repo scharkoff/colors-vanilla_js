@@ -21,13 +21,16 @@ body {
   align-items: center;
 }
 
-.lock {
+.fa-lock {
+  font-size: 18px;
   color: white;
   border: none;
   background: none;
   cursor: pointer;
   background-color: rgba(245, 245, 245, 0.1);
-  padding: 7px 10px;
+  height: 40px;
+  width: 40px;
+  padding: 12px;
   border-radius: 100%;
   -webkit-border-radius: 100%;
   -moz-border-radius: 100%;
@@ -35,11 +38,8 @@ body {
   -o-border-radius: 100%;
 }
 
-.fa-lock {
-  font-size: 18px;
-}
-
 .text {
+  position: relative;
   color: white;
   cursor: pointer;
   background-color: rgba(245, 245, 245, 0.1);
@@ -55,6 +55,40 @@ body {
   background-color: rgba(245, 245, 245, 0.2);
 }
 
-.lock:hover {
+.fa-lock:hover {
   background-color: rgba(245, 245, 245, 0.2);
+}
+
+.alert {
+  display: none;
+  position: relative;
+}
+
+.alert::after {
+  position: absolute;
+  top: -40px;
+  left: 15px;
+  font-size: 14px;
+  font-weight: 200;
+  padding: 5px 15px;
+  content: "Copied!";
+  background-color: rgba(245, 245, 245, 0.2);
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+  -webkit-border-radius: 15px;
+}
+
+.alert::before {
+  content: "";
+  position: absolute;
+  top: -13px;
+  left: 45px;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 10px solid rgba(245, 245, 245, 0.2);
 }
